@@ -196,6 +196,7 @@ namespace PCAxis.Api
                     Text = variable.Name,
                     Elimination = variable.Elimination,
                     Time = variable.IsTime,
+                    Map = string.IsNullOrEmpty(variable.Map)? null : variable.Map,
                     Values = variable.Values.Count > Settings.Current.MaxValues ? null : variable.Values.Select(value => value.Code).ToArray(),
                     ValueTexts = variable.Values.Count > Settings.Current.MaxValues ? null : variable.Values.Select(value => value.Value).ToArray()
                 }).ToArray()

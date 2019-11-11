@@ -34,5 +34,8 @@ namespace PCAxis.Query
 
         [JsonProperty("time", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool Time { get; set; }
+
+        [JsonProperty("map", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Map { get; set; }
     }
 }
